@@ -20,6 +20,14 @@ function sumAll(arr) {
 
 sumAll([1, 4]);
 
+// secondSoluion
+
+function sumAll(arr) {
+  let max = Math.max(arr[0], arr[1]);
+  let min = Math.min(arr[0], arr[1]);
+  return (max * (max + 1) / 2 ) - ( (min - 1) * min / 2);
+}
+
 
 
 // sumAll([1, 4]) should return a number.
