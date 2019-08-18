@@ -20,7 +20,7 @@ function sumAll(arr) {
 
 sumAll([1, 4]);
 
-// secondSoluion
+// secondSolution
 
 function sumAll(arr) {
   let max = Math.max(arr[0], arr[1]);
