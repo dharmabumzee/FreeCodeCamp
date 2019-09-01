@@ -50,3 +50,9 @@ function largestOfFour(mainArray) {
     return Math.max.apply(null, subArray);
   });
 }
+
+// thirdSolution
+
+function largestOfFour(arr) {
+  return arr.map(Function.apply.bind(Math.max, null));
+}
