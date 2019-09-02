@@ -77,3 +77,29 @@ confirmEnding("Bastian", "n");
 // secondSolution
 
 const confirmEnding = (str, target) => str.substr(-target.length) === target ? true : false;
+
+
+// 07 - Basic Algorithm Scripting: Repeat a String Repeat a String
+// Repeat a given string str (first argument) for num times (second argument).
+// Return an empty string if num is not a positive number.
+
+// firstSolution
+
+function repeatStringNumTimes(str, num) {
+  var newString = "";
+  if (num > 0) {
+      for (var i = 0; i < num; i++) {
+        newString = newString.concat(str);
+      }
+  } else {
+    return "";
+  }
+  return newString;
+}
+
+repeatStringNumTimes("abc", 3);
+
+
+
+
+
