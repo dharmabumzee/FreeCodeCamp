@@ -56,3 +56,24 @@ function largestOfFour(mainArray) {
 function largestOfFour(arr) {
   return arr.map(Function.apply.bind(Math.max, null));
 }
+
+// 06 - Basic Algorithm Scripting: Confirm the Ending
+// Check if a string (first argument, str) ends with the given target string (second argument, target).
+// This challenge can be solved with the .endsWith() method, which was introduced in ES2015. 
+// But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+
+// firstSolution
+
+function confirmEnding(str, target) {
+  if (str.substr(-target.length) === target) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+confirmEnding("Bastian", "n");
+
+// secondSolution
+
+const confirmEnding = (str, target) => str.substr(-target.length) === target ? true : false;
