@@ -9,7 +9,25 @@ const convertToF = celsius => celsius * (9/5) + 32;
 convertToF(30);
 
 
+// 02 - Basic Algorithm Scripting: Reverse a String
+// Reverse the provided string.
+// You may need to turn the string into an array before you can reverse it.
+// Your result must be a string.
 
+
+// firstSolution
+
+function reverseString(str) {
+  let result = [];
+  let splitString = str.split("");
+
+  for (let i = 0; i < str.length; i++) {
+   result.push(splitString.pop());
+  }
+  return result.join("");
+}
+
+reverseString("hello");
 
 
 
