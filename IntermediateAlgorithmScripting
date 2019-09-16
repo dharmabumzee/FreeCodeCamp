@@ -295,10 +295,27 @@ fearNotLetter("abce");
 // firstSolution
 
 function uniteUnique(arr) {
+  let result = [];
+  for (let x of arguments) {
+    for (let y of x) {
+      if(result.indexOf(y) === -1) {
+        result.push(y);
+      }
+    }
+  }
+  return result;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+
+// secondSolution
+
+function uniteUnique(arr) {
   return Array.from(arguments).reduce((x, y) => x.concat(y.filter(z => x.indexOf(z) == -1)), []);
 }
 
-// secondSolution
+// thirdSolution
 
 function uniteUnique(arr) {
   return [...new Set([].concat(...arguments))];
