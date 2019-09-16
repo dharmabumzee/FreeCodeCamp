@@ -385,7 +385,7 @@ function sumFibs(num) {
   let secondNumber = 1;
 
   while (secondNumber <= num) {
-    if (secondNumber % 2 !== 0) {
+    if (secondNumber % 2 === 1) {
       sumOfOddNumbers += secondNumber;
     }
     secondNumber += firstNumber;
