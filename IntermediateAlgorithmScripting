@@ -511,7 +511,7 @@ steamrollArray([1, [2], [3, [[4]]]]);
 // steamrollArray([1, {}, [3, [[4]]]])should return [1, {}, 3, 4]
 
 
-// 16 - Intermediate Algorithm Scripting: Binary Agents
+// 17 - Intermediate Algorithm Scripting: Binary Agents
 // Return an English translated sentence of the passed binary string.
 // The binary string will be space separated.
 
