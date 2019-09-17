@@ -395,3 +395,40 @@ function sumFibs(num) {
 }
 
 sumFibs(4);
+
+
+// 13 - Intermediate Algorithm Scripting: Sum All Primes
+// Sum all the prime numbers up to and including the provided number.
+// A prime number is defined as a number greater than one and having only two divisors, one and itself. 
+// For example, 2 is a prime number because it's only divisible by one and two.
+// The provided number may not be a prime.
+
+function sumPrimes(num) {
+
+  // https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+
+  let primesSum = 0;
+  const sieve = new Array(num+1).fill(true)
+
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (sieve[i]) {
+      for (let j = Math.pow(i, 2); j <= num; j += i) {
+        sieve[j] = false
+      }
+    }
+  }
+  
+  return sieve.reduce((primes, isPrime, i) => {
+    if (isPrime && i > 1) {
+      primesSum += i;
+    }
+    return primesSum;
+  }, [])
+}
+
+sumPrimes(10);
+
+
+// sumPrimes(10)should return a number.
+// sumPrimes(10)should return 17.
+// sumPrimes(977)should return 73156.
