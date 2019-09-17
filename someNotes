@@ -1,0 +1,27 @@
+// w-i-p - works for two values .. range not included
+
+function smallestCommons(arr) {
+  
+  // https://www.calculatorsoup.com/calculators/math/lcm.php
+
+  let a = Math.max(...arr);
+  let b = Math.min(...arr);
+  let x = a;
+  let y = b;
+  let remainder = a % b;
+
+    function greatestCommonFactor() {
+         while (remainder !== 0) {
+            x = y;
+            y = remainder;
+            remainder = x % y;
+         }
+       return y;
+    }
+    let gcf = greatestCommonFactor();
+    //return gfc;
+    let lcm = (a * b) / gcf;
+    return lcm;
+ }
+
+ smallestCommons([1, 5])
