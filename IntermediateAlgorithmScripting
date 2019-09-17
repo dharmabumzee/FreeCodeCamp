@@ -442,33 +442,24 @@ sumPrimes(10);
 // numbers between 1 and 3. The answer here would be 6.
 
 
-// w-i-p
 
-function smallestCommons(arr) {
+function smallestCommons(arr) { 
   
-  // https://www.calculatorsoup.com/calculators/math/lcm.php
-
   let a = Math.max(...arr);
   let b = Math.min(...arr);
-  let x = a;
-  let y = b;
-  let remainder = a % b;
+  let lcm = a;
 
-    function greatestCommonFactor() {
-         while (remainder !== 0) {
-            x = y;
-            y = remainder;
-            remainder = x % y;
-         }
-       return y;
+  for (let i = a - 1; i >= b; i--) {
+    if (lcm % i) {
+      lcm += a;
+      i = a;
     }
-    let gcf = greatestCommonFactor();
-    //return gfc;
-    let lcm = (a * b) / gcf;
-    return lcm;
- }
+  }
+  return lcm;
+}
 
- smallestCommons([1, 5])
+smallestCommons([1, 5])
+ 
  
 // smallestCommons([1, 5])should return a number.
 // smallestCommons([1, 5])should return 60.
