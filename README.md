@@ -1,1 +1,1 @@
-# FCC
+# FreeCodeCamp
